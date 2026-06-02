@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Link and List Styling</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Navigation Menu */
+        .navMenu{
+            list-style-type: none;
+            background-color: navy;
+            padding: 10px;
+        }
+
+        .navMenu li{
+            display: inline;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        /* Link Styles */
+        a:link{
+            color: white;
+            text-decoration: none;
+        }
+
+        a:visited{
+            color: lightgray;
+        }
+
+        a:hover{
+            color: yellow;
+        }
+
+        a:active{
+            color: red;
+        }
+
+        /* Event List */
+        .eventList{
+            list-style-type: square;
+            list-style-position: inside;
+            margin-top: 20px;
+        }
+
+        .eventList li{
+            padding: 5px;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Local Community Event Portal</h1>
+
+    <ul class="navMenu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <h2>Upcoming Events</h2>
+
+    <ul class="eventList">
+        <li>Music Festival</li>
+        <li>Food Carnival</li>
+        <li>Book Fair</li>
+        <li>Sports Meet</li>
+    </ul>
+
+</body>
+</html>

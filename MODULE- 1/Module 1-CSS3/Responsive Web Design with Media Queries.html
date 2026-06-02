@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Community Event Portal</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1{
+            text-align: center;
+            background-color: navy;
+            color: white;
+            padding: 2vh;
+        }
+
+        /* Navigation Bar */
+        .navMenu{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            background-color: #333;
+            padding: 0;
+        }
+
+        .navMenu li{
+            padding: 15px;
+        }
+
+        .navMenu a{
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Event Cards using Flexbox */
+        .container{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 2vw;
+        }
+
+        .eventCard{
+            width: 30%;
+            background-color: lightblue;
+            padding: 2vw;
+            margin: 1vw;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+
+        /* Media Query */
+        @media screen and (max-width:768px){
+
+            .navMenu{
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .container{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .eventCard{
+                width: 90%;
+            }
+
+            h1{
+                font-size: 5vw;
+            }
+
+            p{
+                font-size: 3.5vw;
+            }
+
+            img{
+                width: 80%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Local Community Event Portal</h1>
+
+    <ul class="navMenu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="container">
+
+        <div class="eventCard">
+            <img src="https://via.placeholder.com/300x150" alt="Event">
+            <h3>Music Festival</h3>
+            <p>Enjoy live music performances.</p>
+        </div>
+
+        <div class="eventCard">
+            <img src="https://via.placeholder.com/300x150" alt="Event">
+            <h3>Food Carnival</h3>
+            <p>Taste delicious foods from various regions.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

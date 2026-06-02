@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Video Invite with Media Events</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        video{
+            border: 3px solid navy;
+            border-radius: 10px;
+        }
+
+        #message{
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+    </style>
+
+    <script>
+
+        function videoReady(){
+            document.getElementById("message").innerHTML =
+            "Video ready to play!";
+        }
+
+        window.onbeforeunload = function(){
+            return "You have unsaved form data. Are you sure you want to leave?";
+        };
+
+    </script>
+
+</head>
+
+<body>
+
+    <h2>Community Event Promo Video</h2>
+
+    <video width="500"
+           controls
+           oncanplay="videoReady()">
+
+        <source src="sample-video.mp4" type="video/mp4">
+
+        Your browser does not support the video tag.
+
+    </video>
+
+    <p id="message"></p>
+
+    <h3>Event Registration Notes</h3>
+
+    <textarea rows="5" cols="50"
+              placeholder="Enter your details here...">
+    </textarea>
+
+</body>
+</html>

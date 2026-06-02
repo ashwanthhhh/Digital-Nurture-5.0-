@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Debugging with Chrome DevTools</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .eventCard{
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid navy;
+            background-color: white;
+        }
+
+        button{
+            padding: 10px 20px;
+            background-color: navy;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+    </style>
+
+    <script>
+
+        function calculateFee(){
+
+            let tickets = 2;
+            let feePerTicket = 500;
+
+            let totalFee = tickets * feePerTicket;
+
+            console.log("Tickets:", tickets);
+            console.log("Fee Per Ticket:", feePerTicket);
+            console.log("Total Fee:", totalFee);
+
+            alert("Total Fee = ₹" + totalFee);
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Local Community Event Portal</h1>
+
+    <div class="eventCard">
+
+        <h3>Music Festival</h3>
+
+        <p>Ticket Price: ₹500</p>
+
+        <button onclick="calculateFee()">
+            Calculate Fee
+        </button>
+
+    </div>
+
+</body>
+
+</html>

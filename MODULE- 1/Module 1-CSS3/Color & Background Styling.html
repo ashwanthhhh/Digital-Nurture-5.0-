@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color & Background Styling</title>
+
+    <style>
+
+        /* Body Background */
+        body{
+            background-color: #f4f4f4; /* Fallback Color */
+
+            background-image: url("background.jpg");
+
+            background-size: cover;
+
+            font-family: Arial, sans-serif;
+        }
+
+        /* Main Header */
+        h1{
+            color: #003366; /* HEX Color */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Event Section Header */
+        h2{
+            background: linear-gradient(
+                to right,
+                #007BFF,
+                #00C853
+            );
+
+            color: white;
+
+            padding: 10px;
+
+            border-radius: 5px;
+        }
+
+        /* Event Card */
+        .eventCard{
+            background-color: rgba(255, 255, 255, 0.8); /* RGBA */
+
+            padding: 15px;
+
+            margin: 20px;
+
+            border-radius: 10px;
+        }
+
+        /* Paragraph Text */
+        p{
+            color: #333333;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Local Community Event Portal</h1>
+
+    <h2>Upcoming Events</h2>
+
+    <div class="eventCard">
+        <h3>Music Festival</h3>
+        <p>Enjoy live performances from local artists.</p>
+    </div>
+
+    <div class="eventCard">
+        <h3>Food Carnival</h3>
+        <p>Experience a variety of delicious cuisines.</p>
+    </div>
+
+</body>
+</html>

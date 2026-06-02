@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Box Model & Layout Control</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1{
+            text-align: center;
+            color: navy;
+        }
+
+        /* Event Card - Box Model */
+        .eventCard{
+            background-color: white;
+
+            border: 3px solid #007BFF;
+
+            padding: 20px;
+
+            margin: 20px;
+
+            outline: 2px dashed orange;
+        }
+
+        /* Form Field Highlight */
+        .selectedField{
+            outline: 3px solid red;
+        }
+
+        /* Visibility Example */
+        .hiddenBox{
+            visibility: hidden;
+            background-color: lightgreen;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* Display Example */
+        .noneBox{
+            display: none;
+            background-color: lightcoral;
+            padding: 10px;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Local Community Event Portal</h1>
+
+    <div class="eventCard">
+        <h2>Music Festival</h2>
+        <p>Enjoy live performances by local artists.</p>
+    </div>
+
+    <h2>Registration Form</h2>
+
+    <form>
+        <input type="text" placeholder="Enter Name" class="selectedField">
+    </form>
+
+    <div class="hiddenBox">
+        This uses visibility: hidden
+    </div>
+
+    <div class="noneBox">
+        This uses display: none
+    </div>
+
+</body>
+</html>

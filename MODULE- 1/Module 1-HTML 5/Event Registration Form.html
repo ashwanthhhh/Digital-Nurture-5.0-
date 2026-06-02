@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Event Registration Form</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .form-container{
+            width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid navy;
+            border-radius: 10px;
+        }
+
+        h2{
+            text-align: center;
+            color: navy;
+        }
+
+        input, select, textarea{
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        button{
+            background-color: navy;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        output{
+            color: green;
+            font-weight: bold;
+        }
+
+    </style>
+
+    <script>
+        function showMessage() {
+            document.getElementById("result").value =
+                "Registration Submitted Successfully!";
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h2>Event Registration</h2>
+
+        <form onsubmit="showMessage(); return false;">
+
+            <label>Name:</label>
+            <input type="text"
+                   placeholder="Enter your name"
+                   required
+                   autofocus>
+
+            <label>Email:</label>
+            <input type="email"
+                   placeholder="Enter your email"
+                   required>
+
+            <label>Date:</label>
+            <input type="date" required>
+
+            <label>Event Type:</label>
+            <select required>
+                <option value="">Select Event</option>
+                <option>Music Festival</option>
+                <option>Food Carnival</option>
+                <option>Book Fair</option>
+            </select>
+
+            <label>Message:</label>
+            <textarea
+                placeholder="Enter your message"
+                required>
+            </textarea>
+
+            <button type="submit">
+                Register
+            </button>
+
+            <br><br>
+
+            <output id="result"></output>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

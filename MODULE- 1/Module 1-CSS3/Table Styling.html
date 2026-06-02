@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Styling</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1{
+            text-align: center;
+            color: navy;
+        }
+
+        /* Table Styling */
+        table{
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        /* Table Header */
+        th{
+            border: 1px solid black;
+            padding: 12px;
+            background-color: #007BFF;
+            color: white;
+        }
+
+        /* Table Data */
+        td{
+            border: 1px solid black;
+            padding: 12px;
+            background-color: white;
+        }
+
+        /* Zebra Striping */
+        tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Local Community Event Portal</h1>
+
+    <table>
+        <tr>
+            <th>Event Name</th>
+            <th>Date</th>
+            <th>Location</th>
+        </tr>
+
+        <tr>
+            <td>Music Festival</td>
+            <td>10 June 2026</td>
+            <td>City Hall</td>
+        </tr>
+
+        <tr>
+            <td>Food Carnival</td>
+            <td>15 June 2026</td>
+            <td>Main Ground</td>
+        </tr>
+
+        <tr>
+            <td>Book Fair</td>
+            <td>20 June 2026</td>
+            <td>Community Library</td>
+        </tr>
+
+        <tr>
+            <td>Sports Meet</td>
+            <td>25 June 2026</td>
+            <td>Sports Complex</td>
+        </tr>
+    </table>
+
+</body>
+</html>

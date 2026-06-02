@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Event Feedback</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        img{
+            width: 200px;
+            cursor: pointer;
+        }
+
+        input, select, textarea{
+            width: 300px;
+            padding: 8px;
+            margin: 10px 0;
+        }
+
+    </style>
+
+    <script>
+
+        function validatePhone(){
+            let phone = document.getElementById("phone").value;
+
+            if(phone.length != 10){
+                alert("Enter a valid 10-digit phone number");
+            }
+        }
+
+        function showFee(){
+            let event = document.getElementById("eventType").value;
+            let fee = "";
+
+            if(event=="Music Festival")
+                fee="Fee: ₹500";
+
+            else if(event=="Food Carnival")
+                fee="Fee: ₹300";
+
+            else if(event=="Book Fair")
+                fee="Fee: ₹200";
+
+            document.getElementById("fee").innerHTML = fee;
+        }
+
+        function submitForm(){
+            alert("Feedback Submitted Successfully!");
+        }
+
+        function enlargeImage(img){
+            img.style.width="400px";
+        }
+
+        function countChars(){
+            let count =
+            document.getElementById("feedback").value.length;
+
+            document.getElementById("charCount").innerHTML =
+            "Characters: " + count;
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h2>Event Feedback Form</h2>
+
+    <label>Phone Number:</label><br>
+    <input type="text"
+           id="phone"
+           onblur="validatePhone()">
+
+    <br>
+
+    <label>Select Event:</label><br>
+    <select id="eventType" onchange="showFee()">
+        <option>Select</option>
+        <option>Music Festival</option>
+        <option>Food Carnival</option>
+        <option>Book Fair</option>
+    </select>
+
+    <p id="fee"></p>
+
+    <label>Feedback:</label><br>
+    <textarea id="feedback"
+              rows="4"
+              onkeyup="countChars()">
+    </textarea>
+
+    <p id="charCount">Characters: 0</p>
+
+    <button onclick="submitForm()">
+        Submit Feedback
+    </button>
+
+    <h3>Double Click Image to Enlarge</h3>
+
+    <img src="https://via.placeholder.com/200"
+         alt="Event"
+         ondblclick="enlargeImage(this)">
+
+</body>
+</html>
